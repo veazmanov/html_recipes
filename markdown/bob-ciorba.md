@@ -12,11 +12,12 @@ thumbnail: https://img.vjbe.net/bob-ciorba7.webp
 
 
 
-# Bob Chorba (Bulgarian Bean Soup)
+# Bob Chorba (Bulgarian Bean Soup) with Potatoes
 
 ## What do you need?
 
 - [ ] 2 cans of white beans, drained
+- [ ] 2 medium potatoes, peeled and diced
 - [ ] 2 tablespoons oil
 - [ ] 1 large onion, finely chopped
 - [ ] 2 carrots, diced
@@ -36,7 +37,7 @@ thumbnail: https://img.vjbe.net/bob-ciorba7.webp
 1. Fry some celery, onion, carrots in olive oil
 2. Stir in the paprika
 3. Add the tomatoes and cook for a few minutes until slightly thickened.
-6. Add the canned beans and stock. Bring to a boil, then reduce to a simmer.
-7. Simmer for 20–25 minutes, add more water or stock if it gets too thick. 
-8. Mix some flour with water and add that in 
+6. Add the canned beans, diced potatoes, and stock. Bring to a boil, then reduce to a simmer.
+7. Simmer for 20–25 minutes, or until the potatoes are tender, adding more water or stock if it gets too thick.
+8. Mix some flour with water and add that in
 9. Season with salt, black pepper, and chili flakes to taste.

@@ -1,3 +1,8 @@
+---
+images:
+    - https://img.vjbe.net/jiso-stir-fry.jpeg
+
+---
 
 # Jiso's Savory Beef & Aubergine Stir-Fry
 

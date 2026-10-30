@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Recipes</title>
+    <title>Recipes</title>
     <?php $css_version = @filemtime(__DIR__ . '/style.css') ?: time(); ?>
     <link rel="stylesheet" href="style.css?v=<?php echo $css_version; ?>">
 </head>
 
 <body>
     <article class="container">
+        <?php include 'masthead.php'; ?>
         <!-- Added Search Bar -->
         <div class="search-container">
             <input type="text" id="recipeSearch" placeholder="Search recipes..." autocomplete="off">
@@ -67,7 +68,7 @@
             cards.forEach(card => {
                 const title = card.getAttribute('data-title');
                 if (title.includes(query)) {
-                    card.style.display = 'flex';
+                    card.style.display = '';
                 } else {
                     card.style.display = 'none';
                 }

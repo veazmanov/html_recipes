@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe</title>
+    <?php $name = basename($_GET['name'] ?? ''); ?>
+    <title><?php echo $name ? htmlspecialchars(ucwords(str_replace('-', ' ', $name))) . ' | Recipes' : 'Recipe'; ?></title>
     <?php $css_version = @filemtime(__DIR__ . '/style.css') ?: time(); ?>
     <link rel="stylesheet" href="style.css?v=<?php echo $css_version; ?>">
 </head>
 <body>
-    <div class="container">
-        <p style="margin-bottom: 1rem;"><a href="index.php" style="color: var(--accent);">← Back to Index</a></p>
+    <article class="container">
+        <?php include 'masthead.php'; ?>
+        <div class="recipe-tools">
+            <a href="index.php">← All recipes</a>
+            <button type="button" class="print-button" onclick="window.print()">Print</button>
+        </div>
         <?php
-        $name = basename($_GET['name'] ?? '');
         $path = "html/$name.html";
         if (!empty($name) && file_exists($path)) {
             // Images now come from this recipe's markdown frontmatter,
@@ -81,7 +85,7 @@
             echo "<h1>Recipe not found</h1>";
         }
         ?>
-    </div>
+    </article>
     <?php
     $edit_name = $name; // From your existing $name variable
     include 'footer.php';

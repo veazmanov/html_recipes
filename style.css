@@ -319,6 +319,15 @@ ol li::before {
   flex: 0 0 auto;
 }
 
+ol li.step {
+  cursor: pointer;
+}
+
+ol li.done,
+ol li.done::before {
+  color: var(--ink-muted);
+}
+
 /* Images */
 
 img {

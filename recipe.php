@@ -81,6 +81,37 @@
             })();
             </script>";
 
+            // 4. Numbered instructions: clicking step N marks steps 1..N done.
+            //    Clicking the last done step again steps back by one.
+            echo "
+            <script>
+            (function() {
+                const stepsKey = 'steps:' + " . json_encode($name) . ";
+                let saved = {};
+                try { saved = JSON.parse(localStorage.getItem(stepsKey)) || {}; } catch (e) {}
+                document.querySelectorAll('.container ol').forEach((list, listIndex) => {
+                    const steps = Array.from(list.children).filter((el) => el.tagName === 'LI');
+                    let done = saved[listIndex] || 0;
+                    const render = () => steps.forEach((step, i) => step.classList.toggle('done', i < done));
+                    const select = (i) => {
+                        done = (done === i + 1) ? i : i + 1;
+                        saved[listIndex] = done;
+                        try { localStorage.setItem(stepsKey, JSON.stringify(saved)); } catch (e) {}
+                        render();
+                    };
+                    steps.forEach((step, i) => {
+                        step.classList.add('step');
+                        step.tabIndex = 0;
+                        step.addEventListener('click', () => select(i));
+                        step.addEventListener('keydown', (e) => {
+                            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(i); }
+                        });
+                    });
+                    render();
+                });
+            })();
+            </script>";
+
         } else {
             echo "<h1>Recipe not found</h1>";
         }

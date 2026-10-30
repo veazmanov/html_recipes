@@ -200,7 +200,6 @@ hr {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  align-items: start;
 }
 
 .recipe-card {
@@ -214,21 +213,6 @@ hr {
 
 .recipe-card:hover {
   border-color: var(--ink);
-}
-
-.card-image {
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  background: var(--panel);
-  border-bottom: 1px solid var(--panel-edge);
-}
-
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  margin: 0;
-  display: block;
 }
 
 .card-body {
@@ -560,7 +544,6 @@ footer {
     background: none;
   }
 
-  .card-image,
   .view-link {
     display: none;
   }
